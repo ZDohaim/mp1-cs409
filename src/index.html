@@ -32,89 +32,130 @@
       <a class="back" onclick="moveSlides(-1)">&larr; </a>
       <a class="next" onclick="moveSlides(1)">&rarr;</a>
     </div>
-    <div class="Columns">
-      <h1>Multi-Colomn Layout</h1>
+    <div class="BackgroundImage">
+      <h1>Multi-Colomn Layout and Background Image</h1>
       <div class="Column">
-        <i class="icons fa-solid fa-percent fa-fade"></i>
-        <li>Layout and Overall Design - 20%</li>
-        <li>
-          Code (follows HTML5, SASS/SCSS, ES5 or ES6 best practices) - 13%
-        </li>
-        <li>Smooth Scrolling - 10%</li>
-        <li>Carousel - 10%</li>
-        <li>Modal - 10%</li>
-        <li>Responsiveness - 10%</li>
-        <li>Position Indicator - 5%</li>
-        <li>Navbar Resizing - 5%</li>
-        <li>Multi-column layout - 5%</li>
-        <li>CSS3 Animations - 5%</li>
-        <li>Centering - 2%</li>
-        <li>Video - 2%</li>
-        <li>Sticky Navbar - 1%</li>
-        <li>Background Image - 1%</li>
-        <li>Scalable vector icons and inclusion of social media icons - 1%</li>
+        <div class="Row">
+          <i class="icons fa-solid fa-percent fa-fade"></i>
+          <ul>
+            <li>Layout and Overall Design - 20%</li>
+            <li>
+              Code (follows HTML5, SASS/SCSS, ES5 or ES6 best practices) - 13%
+            </li>
+            <li>Smooth Scrolling - 10%</li>
+            <li>Carousel - 10%</li>
+            <li>Modal - 10%</li>
+            <li>Responsiveness - 10%</li>
+            <li>Position Indicator - 5%</li>
+            <li>Navbar Resizing - 5%</li>
+            <li>Multi-column layout - 5%</li>
+            <li>CSS3 Animations - 5%</li>
+            <li>Centering - 2%</li>
+            <li>Video - 2%</li>
+            <li>Sticky Navbar - 1%</li>
+            <li>Background Image - 1%</li>
+            <li>
+              Scalable vector icons and inclusion of social media icons - 1%
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="Column">
-        <i class="icons fa-solid fa-brain fa-beat"></i>
-        <ol>
-          <li>
-            <ul>
+        <div class="Row">
+          <i class="icons fa-solid fa-brain fa-beat"></i>
+          <ol>
+            <li>
               Make a video (3 minutes max) demo-ing your deployed website and
               upload it to Google Drive. Share it with
               uiuc.web.programming@gmail.com and put the share link in the
               google form.
+              <ul>
+                <li>
+                  Show the url to prove you are on your deployed website. Then
+                  show all the requirement features you fulfilled in your mp.
+                </li>
+                <li>
+                  If you were unable to deploy your website, you can demo your
+                  mp locally for some point deduction (hard capped at 80%) Just
+                  make sure you do git status and git log first so we can see
+                  your last edits.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Fill out and submit the form
+              <a href="https://forms.gle/Xyr7YhBBLdafny3H6">here</a>
+            </li>
+          </ol>
+        </div>
+        </div>
+        <div class="Column">
+          <div class="Row">
+            <i class="icons fa-solid fa-scale-balanced fa-shake"></i>
+            <ol>
               <li>
-                Show the url to prove you are on your deployed website. Then
-                show all the requirement features you fulfilled in your mp.
+                This is an individual assignment. No collaboration is permitted.
               </li>
               <li>
-                If you were unable to deploy your website, you can demo your mp
-                locally for some point deduction (hard capped at 80%) Just make
-                sure you do git status and git log first so we can see your last
-                edits.
+                It is not permitted to copy/paste code that is not your own. You
+                are, however, free to look at different code sources for
+                inspiration and clarity. All sources (code as well as reading
+                material) that you reference to complete this assignment must be
+                declared in the submission.
               </li>
-            </ul>
-          </li>
-          <li>
-            Fill out and submit the form
-            <a href="https://forms.gle/Xyr7YhBBLdafny3H6">here</a>
-          </li>
-        </ol>
-      </div>
-      <div class="Column">
-        <i class="icons fa-solid fa-scale-balanced fa-shake"></i>
-        <ol>
-          <li>
-            This is an individual assignment. No collaboration is permitted.
-          </li>
-          <li>
-            It is not permitted to copy/paste code that is not your own. You
-            are, however, free to look at different code sources for inspiration
-            and clarity. All sources (code as well as reading material) that you
-            reference to complete this assignment must be declared in the
-            submission.
-          </li>
-          <li>
-            No libraries are permitted (i.e. Bootstrap, JQuery, React,
-            UIKit...etc.).
-          </li>
-          <li>There should be no use of inline styling.</li>
-          <li>No inline script tags should be used.</li>
-          <li>HTML tables cannot be used for layout.</li>
-          <li>
-            If you think something you’re doing might not be acceptable, please
-            ask on Piazza.
-          </li>
-          <li>
-            You must utilize some SCSS features (variables, mixins, etc). A
-            plain CSS file will receive less points.
-          </li>
-        </ol>
+              <li>
+                No libraries are permitted (i.e. Bootstrap, JQuery, React,
+                UIKit...etc.).
+              </li>
+              <li>There should be no use of inline styling.</li>
+              <li>No inline script tags should be used.</li>
+              <li>HTML tables cannot be used for layout.</li>
+              <li>
+                If you think something you’re doing might not be acceptable,
+                please ask on Piazza.
+              </li>
+              <li>
+                You must utilize some SCSS features (variables, mixins, etc). A
+                plain CSS file will receive less points.
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
-    <h1>About</h1>
-    <img src="assets/image.jpg" />
-    <h1>Contact Me</h1>
+<div class="modalDIV">
+    <h1>Modal</h1>
+    <ul>
+      <button id="Button1"> LAYOUT</button>
+      <div id="Modal1" class="modal">
+        <div class="modalContent">
+          <i class="fa-solid fa-xmark close1"></i>
+          <video autoplay muted loop controls> 
+            <source src="assets/LayoutVid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <button id="Button2"> Navbar Recizing</button>
+      <div id="Modal2" class="modal">
+        <div class="modalContent">
+          <i class="fa-solid fa-xmark close2 "></i>
+          <video autoplay muted loop controls> 
+            <source src="assets/ResizeVID.mp4"  type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <button id="Button3"> Carousel</button>
+      <div id="Modal3" class="modal">
+        <div class="modalContent">
+          <i class="fa-solid fa-xmark close3 "></i>
+          <video autoplay muted loop controls> 
+            <source src="assets/CarouselVID.mp4"  type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </ul>
+</div>
     <script src="./js/main.js" ; type="text/javascript"></script>
   </body>
 </html>

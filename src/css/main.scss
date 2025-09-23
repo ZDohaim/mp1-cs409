@@ -1,4 +1,7 @@
 /* Your SCSS here. */
+html {
+  font-family: "Montserrat";
+}
 body {
   text-align: center;
   height: 100%;
@@ -10,7 +13,7 @@ body {
   top: 0;
   padding: 13px;
   background-color: black;
-  // font-size: 20px;
+  z-index: 1;
 }
 
 #stickyAnchor {
@@ -69,16 +72,48 @@ body {
 
 .Column {
   display: inline-block;
-  width: 500px;
+  width: 450px;
   text-align: left;
   margin-right: 1px;
   font-size: 11px;
   margin-bottom: 10px;
+  vertical-align: top;
 }
 
 .icons {
-  text-align: center !important;
+  text-align: center;
   display: block;
   margin: auto;
   font-size: 20px;
+}
+
+.BackgroundImage {
+  background-image: url("../assets/WEBDEV.png");
+}
+
+.modal {
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalContent {
+  margin: auto;
+  border: 1px;
+  padding: 15px;
+  width: 80%;
+}
+video {
+  width: 60%;
+}
+.close1:hover {
+  cursor: pointer;
+}
+.close2:hover {
+  cursor: pointer;
+}
+.close3:hover {
+  cursor: pointer;
 }
