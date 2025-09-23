@@ -4,18 +4,114 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6f2f364438.js"
+      crossorigin="anonymous"
+    ></script>
     <title>MP1</title>
   </head>
-  <div id="sticky">
-    <a id="stickyAnchor" href="#home">Home</a>
-    <a id="stickyAnchor" href="#about">About</a>
-    <a id="stickyAnchor" href="#contact">Contact</a>
-  </div>
+
   <body>
+    <div id="sticky">
+      <a id="stickyAnchor" href="#home">Home</a>
+      <a id="stickyAnchor" href="#about">About</a>
+      <a id="stickyAnchor" href="#contact">Contact</a>
+    </div>
+
     <h1>Hello World! Welcome to MP1!</h1>
-    <img src="assets/image.jpg" />
-    <h1>Home</h1>
-    <img src="assets/image.jpg" />
+    <div class="carousel">
+      <div class="slides">
+        <img src="assets/image.jpg" />
+      </div>
+      <div class="slides">
+        <img src="assets/random.png" />
+      </div>
+      <div class="slides">
+        <img src="assets/image.jpg" />
+      </div>
+      <a class="back" onclick="moveSlides(-1)">&larr; </a>
+      <a class="next" onclick="moveSlides(1)">&rarr;</a>
+    </div>
+    <div class="Columns">
+      <h1>Multi-Colomn Layout</h1>
+      <div class="Column">
+        <i class="icons fa-solid fa-percent fa-fade"></i>
+        <li>Layout and Overall Design - 20%</li>
+        <li>
+          Code (follows HTML5, SASS/SCSS, ES5 or ES6 best practices) - 13%
+        </li>
+        <li>Smooth Scrolling - 10%</li>
+        <li>Carousel - 10%</li>
+        <li>Modal - 10%</li>
+        <li>Responsiveness - 10%</li>
+        <li>Position Indicator - 5%</li>
+        <li>Navbar Resizing - 5%</li>
+        <li>Multi-column layout - 5%</li>
+        <li>CSS3 Animations - 5%</li>
+        <li>Centering - 2%</li>
+        <li>Video - 2%</li>
+        <li>Sticky Navbar - 1%</li>
+        <li>Background Image - 1%</li>
+        <li>Scalable vector icons and inclusion of social media icons - 1%</li>
+      </div>
+      <div class="Column">
+        <i class="icons fa-solid fa-brain fa-beat"></i>
+        <ol>
+          <li>
+            <ul>
+              Make a video (3 minutes max) demo-ing your deployed website and
+              upload it to Google Drive. Share it with
+              uiuc.web.programming@gmail.com and put the share link in the
+              google form.
+              <li>
+                Show the url to prove you are on your deployed website. Then
+                show all the requirement features you fulfilled in your mp.
+              </li>
+              <li>
+                If you were unable to deploy your website, you can demo your mp
+                locally for some point deduction (hard capped at 80%) Just make
+                sure you do git status and git log first so we can see your last
+                edits.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Fill out and submit the form
+            <a href="https://forms.gle/Xyr7YhBBLdafny3H6">here</a>
+          </li>
+        </ol>
+      </div>
+      <div class="Column">
+        <i class="icons fa-solid fa-scale-balanced fa-shake"></i>
+        <ol>
+          <li>
+            This is an individual assignment. No collaboration is permitted.
+          </li>
+          <li>
+            It is not permitted to copy/paste code that is not your own. You
+            are, however, free to look at different code sources for inspiration
+            and clarity. All sources (code as well as reading material) that you
+            reference to complete this assignment must be declared in the
+            submission.
+          </li>
+          <li>
+            No libraries are permitted (i.e. Bootstrap, JQuery, React,
+            UIKit...etc.).
+          </li>
+          <li>There should be no use of inline styling.</li>
+          <li>No inline script tags should be used.</li>
+          <li>HTML tables cannot be used for layout.</li>
+          <li>
+            If you think something you’re doing might not be acceptable, please
+            ask on Piazza.
+          </li>
+          <li>
+            You must utilize some SCSS features (variables, mixins, etc). A
+            plain CSS file will receive less points.
+          </li>
+        </ol>
+      </div>
+    </div>
     <h1>About</h1>
     <img src="assets/image.jpg" />
     <h1>Contact Me</h1>
