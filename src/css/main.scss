@@ -1,1 +1,21 @@
 /* Your SCSS here. */
+body {
+  text-align: center;
+  height: 100%;
+  margin: 0;
+}
+
+#sticky {
+  position: sticky;
+  top: 0;
+  padding: 13px;
+  background-color: black;
+  // font-size: 20px;
+}
+
+#stickyAnchor {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
