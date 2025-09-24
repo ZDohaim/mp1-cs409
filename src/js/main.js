@@ -26,6 +26,19 @@ function scroll() {
 function Indicator() {
   var Scroll = document.body.scrollTop || document.documentElement.scrollTop;
 
+  if (Scroll <= 0) {
+    Home = 1;
+    About = 0;
+    Contact = 0;
+  } else if (Scroll <= 100) {
+    About = 1;
+    Home = 0;
+    Contact = 0;
+  } else {
+    Contact = 1;
+    Home = 0;
+    About = 0;
+  }
   if (Scroll <= 100) {
     Home = 1;
     About = 0;
@@ -133,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   anchor2.onclick = () => {
-    window.scrollTo({ top: 200, behavior: "smooth" });
+    window.scrollTo({ top: 50, behavior: "smooth" });
   };
   anchor3.onclick = () => {
     window.scrollTo({ top: 1000, behavior: "smooth" });
