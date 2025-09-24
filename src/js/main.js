@@ -25,25 +25,15 @@ function scroll() {
 //Indicator:
 function Indicator() {
   var Scroll = document.body.scrollTop || document.documentElement.scrollTop;
-
-  if (Scroll <= 0) {
+  var percent =
+    Scroll /
+    (document.documentElement.scrollHeight -
+      document.documentElement.clientHeight);
+  if (percent < 0.1) {
     Home = 1;
     About = 0;
     Contact = 0;
-  } else if (Scroll <= 100) {
-    About = 1;
-    Home = 0;
-    Contact = 0;
-  } else {
-    Contact = 1;
-    Home = 0;
-    About = 0;
-  }
-  if (Scroll <= 100) {
-    Home = 1;
-    About = 0;
-    Contact = 0;
-  } else if (Scroll <= 190) {
+  } else if (percent < 0.6) {
     About = 1;
     Home = 0;
     Contact = 0;
@@ -143,12 +133,18 @@ document.addEventListener("DOMContentLoaded", () => {
   var anchor3 = document.getElementById("stickyAnchor3");
 
   anchor1.onclick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    document
+      .getElementsByClassName("carousel")[0]
+      .scrollIntoView({ behavior: "smooth" });
   };
   anchor2.onclick = () => {
-    window.scrollTo({ top: 50, behavior: "smooth" });
+    document
+      .getElementsByClassName("BackgroundImage")[0]
+      .scrollIntoView({ behavior: "smooth" });
   };
   anchor3.onclick = () => {
-    window.scrollTo({ top: 1000, behavior: "smooth" });
+    document
+      .getElementsByClassName("modalDIV")[0]
+      .scrollIntoView({ behavior: "smooth" });
   };
 });
