@@ -26,11 +26,11 @@ function scroll() {
 function Indicator() {
   var Scroll = document.body.scrollTop || document.documentElement.scrollTop;
 
-  if (Scroll <= 120) {
+  if (Scroll <= 100) {
     Home = 1;
     About = 0;
     Contact = 0;
-  } else if (Scroll <= 200) {
+  } else if (Scroll <= 190) {
     About = 1;
     Home = 0;
     Contact = 0;
