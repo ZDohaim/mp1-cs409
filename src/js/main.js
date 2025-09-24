@@ -1,3 +1,6 @@
+let Home = 0;
+let Account = 0;
+let Contact = 0;
 //Scrolling:
 window.onscroll = function () {
   scroll();
@@ -6,21 +9,57 @@ window.onscroll = function () {
 function scroll() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("sticky").style.padding = "5px";
-    document.getElementById("stickyAnchor").style.padding = "5px";
+    document.getElementById("stickyAnchor1").style.padding = "5px";
+    document.getElementById("stickyAnchor2").style.padding = "5px";
+    document.getElementById("stickyAnchor3").style.padding = "5px";
     document.getElementById("sticky").style.fontSize = "13px";
   } else {
     document.getElementById("sticky").style.padding = "20px";
-    document.getElementById("stickyAnchor").style.padding = "13px";
+    document.getElementById("stickyAnchor1").style.padding = "15px";
+    document.getElementById("stickyAnchor2").style.padding = "15px";
+    document.getElementById("stickyAnchor3").style.padding = "15px";
     document.getElementById("sticky").style.fontSize = "18px";
   }
 }
+
 //Indicator:
 function Indicator() {
-  var Scoll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+  var Scroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+  if (Scroll <= 120) {
+    Home = 1;
+    About = 0;
+    Contact = 0;
+  } else if (Scroll <= 200) {
+    About = 1;
+    Home = 0;
+    Contact = 0;
+  } else {
+    Contact = 1;
+    Home = 0;
+    About = 0;
+  }
+  console.log(Scroll);
+  if (Home == 1) {
+    document.getElementById("stickyAnchor1").style.backgroundColor =
+      "lightgray";
+  } else {
+    document.getElementById("stickyAnchor1").style.backgroundColor = "";
+  }
+  if (About == 1) {
+    document.getElementById("stickyAnchor2").style.backgroundColor =
+      "lightgray";
+  } else {
+    document.getElementById("stickyAnchor2").style.backgroundColor = "";
+  }
+  if (Contact == 1) {
+    document.getElementById("stickyAnchor3").style.backgroundColor =
+      "lightgray";
+  } else {
+    document.getElementById("stickyAnchor3").style.backgroundColor = "";
+  }
 }
+
 //Carousel:
 let Index = 1;
 showSlides(Index);
@@ -83,5 +122,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   close3.onclick = () => {
     modal3.style.display = "none";
+  };
+
+  //Smooth Scrolling:
+  var anchor1 = document.getElementById("stickyAnchor1");
+  var anchor2 = document.getElementById("stickyAnchor2");
+  var anchor3 = document.getElementById("stickyAnchor3");
+
+  anchor1.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  anchor2.onclick = () => {
+    window.scrollTo({ top: 200, behavior: "smooth" });
+  };
+  anchor3.onclick = () => {
+    window.scrollTo({ top: 1000, behavior: "smooth" });
   };
 });
